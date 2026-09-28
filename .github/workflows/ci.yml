@@ -31,4 +31,6 @@ jobs:
 
       - name: Log PR title
         if: github.event_name == 'pull_request'
-        run: echo "PR title = ${{ github.event.pull_request.title }}"
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: printf 'PR title = %s\n' "$PR_TITLE"
