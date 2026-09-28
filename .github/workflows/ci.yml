@@ -21,9 +21,6 @@ jobs:
         id: changed
         uses: tj-actions/changed-files@v45
 
-      - name: Install tooling
-        run: curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-
       - name: Build
         run: |
           echo "Build de l'application"
